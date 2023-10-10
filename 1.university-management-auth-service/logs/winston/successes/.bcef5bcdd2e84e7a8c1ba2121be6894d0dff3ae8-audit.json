@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "F:\\Programming Hero Batch-4\\Next Level 2.0\\university-management-backend-ph\\1.university-management-auth-service\\logs\\winston\\successes\\.bcef5bcdd2e84e7a8c1ba2121be6894d0dff3ae8-audit.json",
+    "files": [
+        {
+            "date": 1696883272886,
+            "name": "F:\\Programming Hero Batch-4\\Next Level 2.0\\university-management-backend-ph\\1.university-management-auth-service\\logs\\winston\\successes\\phu-2023-10-10-02-success.log",
+            "hash": "92d3353e4c942781acacd7e1e514a0158b447912e86a8f9b583f7699bca1897a"
+        },
+        {
+            "date": 1696888219773,
+            "name": "F:\\Programming Hero Batch-4\\Next Level 2.0\\university-management-backend-ph\\1.university-management-auth-service\\logs\\winston\\successes\\phu-2023-10-10-03-success.log",
+            "hash": "d4f8cc9260b6b93925c06d64d00416be984b55ff3878f4bb0e937b0a41a464d1"
+        },
+        {
+            "date": 1696890487248,
+            "name": "F:\\Programming Hero Batch-4\\Next Level 2.0\\university-management-backend-ph\\1.university-management-auth-service\\logs\\winston\\successes\\phu-2023-10-10-04-success.log",
+            "hash": "83a949c948a49b5ff1a2192e9347c5bf282e6bc0eb3a2c50175afd09676a9f44"
+        }
+    ],
+    "hashType": "sha256"
+}
