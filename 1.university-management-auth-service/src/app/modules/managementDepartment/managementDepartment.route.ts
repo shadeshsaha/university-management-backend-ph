@@ -7,13 +7,16 @@ import { ManagementDepartmentValidation } from './managementDepartment.validatio
 
 const router = express.Router();
 
-router.post(
-  '/create-department',
-  validateRequest(
-    ManagementDepartmentValidation.createManagementDepartmentZodSchema
+router.get(
+  '/',
+  auth(
+    ENUM_USER_ROLE.SUPER_ADMIN,
+    ENUM_USER_ROLE.ADMIN,
+    ENUM_USER_ROLE.FACULTY,
+    ENUM_USER_ROLE.FACULTY,
+    ENUM_USER_ROLE.STUDENT
   ),
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  ManagementDepartmentController.createDepartment
+  ManagementDepartmentController.getAllDepartments
 );
 
 router.get(
@@ -25,6 +28,15 @@ router.get(
     ENUM_USER_ROLE.STUDENT
   ),
   ManagementDepartmentController.getSingleDepartment
+);
+
+router.post(
+  '/create-department',
+  validateRequest(
+    ManagementDepartmentValidation.createManagementDepartmentZodSchema
+  ),
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+  ManagementDepartmentController.createDepartment
 );
 
 router.patch(
@@ -40,18 +52,6 @@ router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN),
   ManagementDepartmentController.deleteDepartment
-);
-
-router.get(
-  '/',
-  auth(
-    ENUM_USER_ROLE.SUPER_ADMIN,
-    ENUM_USER_ROLE.ADMIN,
-    ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.STUDENT
-  ),
-  ManagementDepartmentController.getAllDepartments
 );
 
 export const ManagementDepartmentRoutes = router;
