@@ -1,0 +1,5 @@
+Sat Oct 28 2023 5:49:16 } [PH] error: 
+Invalid `prisma.student.create()` invocation:
+
+
+Null constraint violation on the fields: (`profileImage`)
